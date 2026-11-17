@@ -84,5 +84,5 @@ System.out.println(b[0]);  // 99 (바뀜!)
 ## 17.6 자주 빠지는 함정 ⚠️
 
 1. **NullPointerException** — null 체크를 습관화. `if (s != null)` 또는 `Optional` 사용 (Part 18)
-2. **`==` vs `equals()`** — `==`는 주소 비교, `equals()`는 내용 비교
+2. **`==` vs `equals()`** — 참조형의 `==`는 같은 객체인지 비교. 기본 `Object.equals()`도 동일성을 비교하며, 값 비교는 재정의 여부와 기준에 따라 달라진다. [Part 32](part32_Object와객체비교.md) 참고.
 3. **메모리 누수** — 컬렉션에 객체를 넣고 빼지 않으면 GC가 못 치움

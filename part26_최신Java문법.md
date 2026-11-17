@@ -20,7 +20,7 @@ var map = new HashMap<String, List<Integer>>();
 
 ---
 
-## 26.2 텍스트 블록 (Java 13)
+## 26.2 텍스트 블록 (Java 15 정식, Java 13 미리보기)
 
 ```java
 // 기존
@@ -65,7 +65,7 @@ String result = switch (day) {
 
 ---
 
-## 26.4 record — 불변 데이터 클래스 (Java 16)
+## 26.4 record — 얕게 불변인 데이터 클래스 (Java 16)
 
 ```java
 // 기존: 30줄짜리 DTO
@@ -86,7 +86,7 @@ System.out.println(u.age());    // 17
 System.out.println(u);          // User[name=민수, age=17]
 ```
 
-> `record`는 생성자, getter, equals, hashCode, toString을 **자동 생성**.
+> 별도로 선언하지 않으면 `record`는 표준 생성자, 컴포넌트 접근자, equals, hashCode, toString을 자동 제공한다. 접근자는 `getName()`이 아니라 `name()` 형태다. 가변 리스트 등 내부 객체까지 불변으로 만드는 것은 아니므로 [Part 33의 방어적 복사](part33_불변객체와객체복사.md)를 함께 참고한다.
 
 ---
 
@@ -128,7 +128,8 @@ if (obj instanceof String s) {
 | Java 8 | 람다, 스트림, Optional |
 | Java 10 | `var` |
 | Java 11 | `String.isBlank()`, `Files.readString()` |
-| Java 13 | 텍스트 블록 |
+| Java 13 | 텍스트 블록 미리보기 |
+| Java 15 | 텍스트 블록 정식 |
 | Java 14 | switch 표현식 |
 | Java 16 | record, 패턴 매칭 |
 | Java 17 ⭐ | sealed class **(LTS)** |

@@ -1,0 +1,7 @@
+first == second: false
+first == alias: true
+equals: true
+같은 hashCode: true
+중복 제거 후 크기: 1
+동등한 키로 조회: 10
+Product[id=P001, name=노트]
